@@ -1,1 +1,94 @@
+# CCNA Lab 01 – CLI Exploration
+
+#Goal -The goal of this lab was to understand how to navigate the Cisco IOS CLI and identify the differences between user EXEC, privileged EXEC, and global configuration modes.
+
+#Topology
+* 1 Switch (SW1)
+* 4 PCs (not used directly)
+* Accessed through console in Packet Tracer
+
+## ⚙️ What I Did
+
+* Accessed the CLI through Packet Tracer
+* Moved between different CLI modes
+* Tested commands in each mode
+* Used `?` to explore available commands
+
+## 💻 Key Observations
+
+### User EXEC Mode (`>`)
+
+* Limited access
+* Could NOT run:
+
+  * `show running-config`
+  * `configure terminal`
+* Could use basic commands like:
+
+  * `show interfaces status`
+
+### Privileged EXEC Mode (`#`)
+
+* Accessed using `enable`
+* Full visibility of device
+* Could run:
+
+  * `show running-config`
+* Still could NOT configure settings
+
+### Global Configuration Mode (`(config)#`)
+
+* Accessed using `configure terminal`
+* Used to make actual changes
+* Commands like `hostname` worked here
+
+## 🔍 Verification / Testing
+
+Commands tested across modes:
+
+* `show running-config`
+  → Only works in privileged EXEC
+
+* `hostname thisisalonghostnameSW1`
+  → Only works in global config mode
+
+* `?`
+  → Displays available commands in each mode
+
+## 📸 Proof
+
+### 1. User EXEC Mode
+
+![User Mode](user-exec.png)
+
+### 2. Privileged EXEC Mode
+
+![Privileged Mode](priv-exec.png)
+
+### 3. Global Config Mode
+
+![Config Mode](config-mode.png)
+
+## 🧩 What I Learned
+
+* The CLI is divided into different modes with different permissions
+* The prompt (`>`, `#`, `(config)#`) tells you exactly where you are
+* Commands only work in the correct mode
+* The `?` command is extremely useful for discovering commands
+
+## ⚠️ Challenges
+
+* Initially tried running config commands in the wrong mode
+* Had to pay attention to the prompt to understand where I was
+* Some commands worked in one mode but failed in others, which helped clarify their purpose
+
+## 🌍 Real-World Connection
+
+This is similar to user roles in a system:
+
+* User EXEC = basic user
+* Privileged EXEC = admin viewing system
+* Config mode = admin making changes
+
+Understanding this is critical because misusing commands in production networks can lead to misconfigurations.
 
