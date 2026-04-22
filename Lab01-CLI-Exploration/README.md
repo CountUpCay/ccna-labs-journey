@@ -48,4 +48,11 @@ This lab focuses on understanding how the Cisco IOS CLI works by testing command
 
 ## Screenshots
 
-To be added
+### User Mode
+![User](section1.0.png)
+
+### Privileged Mode
+![Privileged](section2.0.png)
+
+### Config Mode
+![Config](section3.0.png)
